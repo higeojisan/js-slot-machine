@@ -4,6 +4,9 @@
   var pannel_0_ele = document.getElementById('pannel_0');
   var pannel_1_ele = document.getElementById('pannel_1');
   var pannel_2_ele = document.getElementById('pannel_2');
+  var btn_0_ele = document.getElementById('btn_0');
+  var btn_1_ele = document.getElementById('btn_1');
+  var btn_2_ele = document.getElementById('btn_2');
   var spinBtn = document.getElementById('spinBtn');
   var pannel_0_timer;
   var pannel_1_timer;
@@ -13,6 +16,18 @@
     '☆', '♪', '○', '□', '△', '♡', '7'
   ];
 
+  // STOPボタンの処理
+  btn_0_ele.addEventListener('click', function() {
+    clearInterval(pannel_0_timer);
+  });
+  btn_1_ele.addEventListener('click', function() {
+    clearInterval(pannel_1_timer);
+  });
+  btn_2_ele.addEventListener('click', function() {
+    clearInterval(pannel_2_timer);
+  });
+
+  // SPINボタンの処理
   spinBtn.addEventListener('click', function() {
     // パネルが回る処理
     pannel_0_timer = setInterval(function() {
