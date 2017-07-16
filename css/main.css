@@ -50,3 +50,7 @@ body {
   background: #f44336;
   cursor: pointer;
 }
+
+.inactive {
+  opacity: 0.5;
+}
